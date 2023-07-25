@@ -1,3 +1,4 @@
+import { Container, Grid } from '@mui/material';
 import './App.css';
 import {useState, useEffect} from 'react';
 function Counter({title, initValue}){
@@ -45,10 +46,24 @@ function CounterUseEffect(){
 }
 function App() {
   return (
-    <div>
-      <Counter title="불면증 카운터" initValue={10}></Counter>
-      <CounterUseEffect></CounterUseEffect>
-    </div>
+    <Container>
+      <Grid container maxWidth="xl">
+        <Grid item xs={12} sm={6} md={3}>
+          <Counter title="불면증 카운터" initValue={10}></Counter>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <CounterUseEffect></CounterUseEffect>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <CounterUseEffect></CounterUseEffect>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <CounterUseEffect></CounterUseEffect>
+        </Grid>
+      </Grid>
+      
+     
+    </Container>
   );
 }
 
